@@ -5,6 +5,8 @@
 
 // Simple Hodgkin-Huxley CUDA RK4 implementation for small N (2-3 neurons)
 
+
+
 __device__ float alpha_m(float V){ return 0.1f*(V+40.0f)/(1.0f - expf(-(V+40.0f)/10.0f)); }
 __device__ float beta_m(float V){ return 4.0f * expf(-(V+65.0f)/18.0f); }
 __device__ float alpha_h(float V){ return 0.07f * expf(-(V+65.0f)/20.0f); }

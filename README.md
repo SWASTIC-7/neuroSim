@@ -44,6 +44,8 @@ where:
 - I_coupling represents electrical (gap junction) or synaptic interactions with connected neighbors
 - C_m is the membrane capacitance
 
+![image](./assets/image.png)
+
 ### Parallelization Strategy
 
 The internal dynamics of each neuron are inherently parallel, as the HH equations for each cell can be solved independently before applying coupling terms. The GPU implementation assigns one thread per neuron, enabling simultaneous updates of all neuronal states during each time step.
